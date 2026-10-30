@@ -1,0 +1,23 @@
+{
+  "voice_id": "JBFqnCBsd6RMkjVDRZzb",
+  "voice_name": "George - Warm, Captivating Storyteller",
+  "model_id": "eleven_v3",
+  "seed": 1207,
+  "voice_settings": { "stability": 0.5, "similarity_boost": 0.8, "style": 0.35, "use_speaker_boost": true },
+  "joiner": "\n\n",
+  "lines": [
+    { "id": "hook", "text": "Two computers. One desk. A Mac... and a PC." },
+    { "id": "stuck", "text": "And every day, the same little ritual. You copy something on one... and it's stuck there." },
+    { "id": "detours", "text": "[sighs] So you email it to yourself. Message it to yourself. Or type it all over again... and get one letter wrong." },
+    { "id": "whatif", "text": "What if your clipboard could just... cross over?" },
+    { "id": "reveal", "text": "This is ClipBridge." },
+    { "id": "paste", "text": "Copy on your Mac. Paste on your PC. It's already there. And it works the other way around, too." },
+    { "id": "pair", "text": "Connecting them takes one short code. Type it on the other computer, and they find each other. The only rule: both need to be on the same Wi-Fi network." },
+    { "id": "history", "text": "Everything you copy, on both computers, lands in one shared history, with no limit. Search it, star what matters, and copy it again whenever you need it." },
+    { "id": "images", "text": "Text, formatted text, even screenshots." },
+    { "id": "privacy", "text": "And it never goes through the cloud. Your computers talk directly, encrypted, on your own network. Copying a password? One click pauses it all." },
+    { "id": "languages", "text": "In English, Hebrew, Spanish, French, Russian, or Arabic." },
+    { "id": "payoff", "text": "So stop sending things to yourself. Just copy... and paste." },
+    { "id": "end", "text": "ClipBridge. Free and open source, for Mac and Windows." }
+  ]
+}

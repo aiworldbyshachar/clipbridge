@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' clipimg: data:; style-src 'self'; script-src 'self'">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ClipBridge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <img src="../../assets/icon-128.png" alt="" width="26" height="26">
+        <span>ClipBridge</span>
+      </div>
+      <button class="status" id="status" type="button" data-i18n-title="connectionStatus">
+        <span class="dot"></span><span class="status-label" data-i18n="connecting"></span>
+      </button>
+      <button class="icon-btn" id="open-settings" type="button" data-i18n-title="settings" data-icon="settings"></button>
+    </header>
+
+    <div class="searchbar">
+      <span class="search-icon" data-icon="search"></span>
+      <input id="search" type="search" data-i18n-placeholder="searchPlaceholder" data-i18n-aria="search" autocomplete="off" spellcheck="false">
+    </div>
+
+    <nav class="filters" id="filters" data-i18n-aria="filtersLabel"></nav>
+    <div class="banners" id="banners"></div>
+    <main class="list" id="list" data-i18n-aria="historyLabel"></main>
+
+    <footer class="footer">
+      <span id="count"></span>
+      <span id="shortcut-hint"></span>
+    </footer>
+  </div>
+
+  <section class="sheet" id="settings" hidden data-i18n-aria="settings">
+    <header class="sheet-head">
+      <button class="icon-btn flip-ltr" id="close-settings" type="button" data-i18n-title="back" data-icon="back"></button>
+      <h2 data-i18n="settings"></h2>
+    </header>
+
+    <div class="sheet-body">
+      <section class="group">
+        <h3 data-i18n="groupGeneral"></h3>
+        <label class="field">
+          <span data-i18n="language"></span>
+          <select id="language"></select>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" data-setting="openAtLogin">
+          <span class="track"></span>
+          <span class="toggle-text"><b data-i18n="loginTitle"></b><small id="login-hint"></small></span>
+        </label>
+        <p class="msg error" id="login-approval" hidden data-i18n="loginNeedsApproval"></p>
+      </section>
+
+      <section class="group">
+        <h3 data-i18n="groupConnect"></h3>
+        <p class="help" data-i18n-html="connectHelp"></p>
+        <div class="code-row">
+          <code id="code" dir="ltr"></code>
+          <button class="btn" id="copy-code" type="button" data-i18n="copy"></button>
+        </div>
+        <label class="field">
+          <span data-i18n="codeFromOther"></span>
+          <div class="field-row">
+            <input id="code-input" dir="ltr" placeholder="XXXX-XXXX-XXXX" autocomplete="off" spellcheck="false">
+            <button class="btn primary" id="apply-code" type="button" data-i18n="apply"></button>
+          </div>
+        </label>
+        <p class="msg" id="code-msg" hidden></p>
+        <button class="link" id="regen-code" type="button" data-i18n="newCode"></button>
+      </section>
+
+      <section class="group">
+        <h3 data-i18n="groupDevices"></h3>
+        <ul class="peer-list" id="peer-list"></ul>
+        <p class="help"><span data-i18n="myAddress"></span> <span id="my-addr" dir="ltr"></span></p>
+        <details class="manual">
+          <summary data-i18n="notShowing"></summary>
+          <ol class="tips">
+            <li data-i18n="tip1"></li>
+            <li data-i18n="tip2"></li>
+            <li data-i18n="tip3"></li>
+            <li data-i18n="tip4"></li>
+          </ol>
+          <div class="field-row">
+            <input id="peer-input" dir="ltr" placeholder="192.168.1.20" autocomplete="off" spellcheck="false">
+            <button class="btn" id="add-peer" type="button" data-i18n="add"></button>
+          </div>
+          <p class="msg" id="peer-msg" hidden></p>
+          <ul class="manual-list" id="manual-list"></ul>
+        </details>
+      </section>
+
+      <section class="group">
+        <h3 data-i18n="groupThisDevice"></h3>
+        <label class="field">
+          <span data-i18n="deviceName"></span>
+          <input id="device-name" maxlength="60" autocomplete="off">
+        </label>
+        <label class="field">
+          <span data-i18n="shortcutLabel"></span>
+          <input id="shortcut" readonly dir="ltr" data-i18n-placeholder="shortcutPlaceholder">
+        </label>
+        <p class="msg" id="shortcut-msg" hidden></p>
+      </section>
+
+      <section class="group">
+        <h3 data-i18n="groupBehavior"></h3>
+        <label class="toggle">
+          <input type="checkbox" data-setting="applyIncoming">
+          <span class="track"></span>
+          <span class="toggle-text"><b data-i18n="applyIncomingTitle"></b><small data-i18n="applyIncomingHint"></small></span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" data-setting="hideAfterCopy">
+          <span class="track"></span>
+          <span class="toggle-text"><b data-i18n="hideAfterCopyTitle"></b><small data-i18n="hideAfterCopyHint"></small></span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" data-setting="notifyOnReceive">
+          <span class="track"></span>
+          <span class="toggle-text"><b data-i18n="notifyTitle"></b><small data-i18n="notifyHint"></small></span>
+        </label>
+        <label class="toggle">
+          <input type="checkbox" data-setting="paused">
+          <span class="track"></span>
+          <span class="toggle-text"><b data-i18n="pausedTitle"></b><small data-i18n="pausedHint"></small></span>
+        </label>
+      </section>
+
+      <section class="group">
+        <h3 data-i18n="groupHistory"></h3>
+        <p class="help"><span data-i18n="historyHelp"></span> <span id="stat-count"></span></p>
+        <div class="row-actions">
+          <button class="btn" id="open-folder" type="button" data-i18n="openFolder"></button>
+          <button class="btn danger" id="clear-history" type="button" data-i18n="clearHistory"></button>
+        </div>
+        <p class="help" data-i18n="clearHelp"></p>
+      </section>
+
+      <p class="about">ClipBridge <span id="version"></span></p>
+    </div>
+  </section>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="../shared/i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<template>
+  <link rel="stylesheet" href="assets/ui.css" />
+  <style>
+    @font-face { font-family: "CB Sans"; src: local("Segoe UI"); font-weight: 400; }
+    @font-face { font-family: "CB Sans"; src: local("Segoe UI Semibold"); font-weight: 600; }
+    @font-face { font-family: "CB Sans"; src: local("Segoe UI Bold"); font-weight: 700; }
+    @font-face { font-family: "CB Mono"; src: local("Consolas"); font-weight: 400; }
+    #root { position: absolute; inset: 0; overflow: hidden; font-family: "CB Sans"; color: #2b2b30; }
+    #dt-wrap { position: absolute; inset: 0; background: #e7e5e1; }
+    .t-grain { position: absolute; inset: 0; opacity: 0.06;
+      background-image: repeating-radial-gradient(circle at 31% 27%, #000 0 1px, transparent 1px 3px), repeating-radial-gradient(circle at 63% 71%, #000 0 1px, transparent 1px 4px); }
+    .gwin { position: absolute; background: #fbfbfb; border-radius: 16px; box-shadow: 0 30px 70px rgba(30, 30, 40, 0.18); overflow: hidden; }
+    .gbar { height: 54px; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; background: #f0f0f0; border-bottom: 1px solid #e2e2e2; font-size: 22px; font-weight: 600; color: #5d5d63; }
+    .gline { display: flex; gap: 20px; padding: 14px 28px; border-bottom: 1px solid #ececec; font-size: 26px; color: #45454b; }
+    .gline b { width: 110px; font-weight: 600; color: #9a9aa0; }
+    .glink { color: #5f7396; text-decoration: underline; text-underline-offset: 4px; }
+    .gsend { display: inline-block; padding: 12px 30px; border-radius: 10px; background: #7b8597; color: #fff; font-size: 24px; font-weight: 600; }
+    #v1 { left: 330px; top: 170px; width: 1020px; height: 640px; }
+    #v2 { left: 560px; top: 150px; width: 820px; height: 700px; background: #f3f3f2; }
+    #v3 { left: 250px; top: 200px; width: 1300px; height: 560px; }
+    .bubble { position: absolute; right: 40px; max-width: 640px; padding: 18px 24px; border-radius: 26px 26px 8px 26px; background: #9aa6b8; color: #fff; font-size: 26px; font-weight: 600; }
+    .ctx { position: absolute; padding: 10px 16px; border-radius: 10px; background: #fff; box-shadow: 0 10px 26px rgba(20, 20, 30, 0.2); font-size: 24px; color: #2b2b30; }
+    .ctx small { display: block; font-size: 18px; color: #9a9aa0; }
+    #typo { text-decoration: underline wavy; text-decoration-color: rgba(204, 55, 55, 0); text-decoration-thickness: 3px; text-underline-offset: 7px; }
+  </style>
+
+  <div data-hf-id="hf-jpav" id="root" data-composition-id="detours" data-width="1920" data-height="1080">
+   <div data-hf-id="hf-oa52" id="dt-wrap">
+    <div data-hf-id="hf-0su6" class="t-grain"></div>
+
+    <!-- 1. email it to yourself -->
+    <div data-hf-id="hf-7mh6" id="v1" class="gwin">
+      <div data-hf-id="hf-gix2" class="gbar"><span data-hf-id="hf-arqu">New message</span><span data-hf-id="hf-rhug" style="letter-spacing: 18px">—☐✕</span></div>
+      <div data-hf-id="hf-x6vb" class="gline"><b data-hf-id="hf-r21w">To</b>me@mymail.com</div>
+      <div data-hf-id="hf-81uh" class="gline"><b data-hf-id="hf-ptn3">Subject</b>link</div>
+      <div data-hf-id="hf-3evh" style="padding: 30px 28px; font-size: 28px"><span data-hf-id="hf-1e99" class="glink">docs.company.com/q3-launch-final-v7</span></div>
+      <div data-hf-id="hf-3doc" style="position: absolute; left: 28px; bottom: 30px"><span data-hf-id="hf-tqsc" id="v1-send" class="gsend">Send</span></div>
+    </div>
+
+    <!-- 2. message it to yourself -->
+    <div data-hf-id="hf-3od5" id="v2" class="gwin">
+      <div data-hf-id="hf-zs2r" class="gbar" style="justify-content: flex-start; gap: 16px"><span data-hf-id="hf-dblc" style="width: 40px; height: 40px; border-radius: 50%; background: #c9ced6; display: inline-block"></span>Note to self</div>
+      <div data-hf-id="hf-sr6s" id="v2-bubble" class="bubble" style="top: 380px">docs.company.com/q3-launch-final-v7</div>
+      <div data-hf-id="hf-i12n" id="v2-tick" style="position: absolute; right: 44px; top: 470px; font-size: 20px; color: #9a9aa0">Delivered</div>
+      <div data-hf-id="hf-y7wo" style="position: absolute; left: 24px; right: 24px; bottom: 22px; height: 64px; border-radius: 32px; background: #fff; border: 1px solid #e0e0e0"></div>
+    </div>
+
+    <!-- 3. type it all over again -->
+    <div data-hf-id="hf-2wpc" id="v3" class="gwin">
+      <div data-hf-id="hf-n2dm" class="gbar"><span data-hf-id="hf-6sey">New message</span><span data-hf-id="hf-y8a8" style="letter-spacing: 18px">—☐✕</span></div>
+      <div data-hf-id="hf-r92c" class="gline"><b data-hf-id="hf-us4c">To</b>team@company.com</div>
+      <div data-hf-id="hf-bfdo" style="padding: 34px 28px 0; font-size: 30px">Hi team — here's the deck:</div>
+      <div data-hf-id="hf-pov8" style="padding: 14px 28px; font-size: 32px; white-space: nowrap"><span data-hf-id="hf-aq7s" class="glink"><span data-hf-id="hf-cxwl" id="ty-a"></span><span data-hf-id="hf-1aus" id="typo"></span><span data-hf-id="hf-gw0m" id="ty-b"></span></span><span data-hf-id="hf-p3o2" class="caret" style="width: 3px; background: #2b2b30"></span></div>
+      <div data-hf-id="hf-amd3" id="v3-ctx" class="ctx" style="left: 330px; top: 330px"><small data-hf-id="hf-00nb">Did you mean</small><b data-hf-id="hf-0o06">launch</b></div>
+    </div>
+
+    <svg data-hf-id="hf-es6k" id="dt-cursor" class="cursor" viewBox="0 0 22 32" style="width: 44px; height: 64px"><path data-hf-id="hf-geat" d="M2 2 L2 26 L8 20 L12 30 L16 28 L12 18.5 L20 18.5 Z" fill="#111" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+   </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // Scene time = film time - 11.7
+    gsap.set(["#v2", "#v3", "#v2-bubble", "#v2-tick", "#v3-ctx"], { opacity: 0 });
+    gsap.set("#dt-cursor", { x: 1500, y: 1000 });
+
+    // the overlay arrives over the desk
+    tl.fromTo("#dt-wrap", { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "power2.out" }, 0);
+    tl.fromTo("#v1", { y: 30, scale: 0.97 }, { y: 0, scale: 1, duration: 0.5, ease: "expo.out" }, 0);
+
+    // 1. email it to yourself: click Send, the mail flies off
+    tl.to("#dt-cursor", { x: 440, y: 740, duration: 0.6, ease: "expo.out" }, 0.1);
+    tl.to("#v1-send", { scale: 0.95, duration: 0.07, yoyo: true, repeat: 1 }, 0.78);
+    tl.to("#dt-cursor", { opacity: 0, duration: 0.15 }, 0.95);
+    tl.to("#v1", { x: 700, y: -500, scale: 0.35, rotation: 6, opacity: 0, duration: 0.5, ease: "power3.in" }, 0.95);
+
+    // 2. message it to yourself
+    tl.fromTo("#v2", { opacity: 0, x: 120 }, { opacity: 1, x: 0, duration: 0.45, ease: "expo.out" }, 1.55);
+    tl.fromTo("#v2-bubble", { opacity: 0, scale: 0.6, transformOrigin: "100% 100%" }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)" }, 1.85);
+    tl.to("#v2-tick", { opacity: 1, duration: 0.2 }, 2.45);
+    tl.to("#v2", { x: -160, opacity: 0, filter: "blur(8px)", duration: 0.3, ease: "power3.in" }, 3.75);
+
+    // 3. type it all over again... and get one letter wrong
+    tl.fromTo("#v3", { opacity: 0, x: 120, filter: "blur(8px)" }, { opacity: 1, x: 0, filter: "blur(0px)", duration: 0.4, ease: "expo.out" }, 3.95);
+    const full = "docs.company.com/q3-lanch-final-v7";
+    const a = "docs.company.com/q3-".length, b = a + "lanch".length;
+    const typed = { n: 0 };
+    const draw = () => {
+      const n = Math.round(typed.n);
+      document.getElementById("ty-a").textContent = full.slice(0, Math.min(n, a));
+      document.getElementById("typo").textContent = n > a ? full.slice(a, Math.min(n, b)) : "";
+      document.getElementById("ty-b").textContent = n > b ? full.slice(b, n) : "";
+    };
+    tl.fromTo(typed, { n: 0 }, { n: full.length, duration: 1.7, ease: "none", onUpdate: draw, onStart: draw }, 4.25);
+    tl.fromTo("#typo", { textDecorationColor: "rgba(204,55,55,0)" }, { textDecorationColor: "rgba(204,55,55,1)", duration: 0.2 }, 6.63);
+    tl.fromTo("#v3-ctx", { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.3, ease: "expo.out" }, 6.8);
+
+    // the overlay hands back to the desk
+    tl.to("#dt-wrap", { opacity: 0, duration: 0.3, ease: "power2.in" }, 7.05);
+    window.__timelines["detours"] = tl;
+  </script>
+</template>
