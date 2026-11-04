@@ -100,6 +100,12 @@
     details summary { cursor: pointer; font-weight: 600; font-size: 17px; }
     details p { margin: 8px 0 0; color: var(--muted); }
 
+    .more { display: flex; align-items: center; gap: 18px; padding: 18px 22px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface); color: var(--ink); text-decoration: none; max-width: 560px; }
+    .more:hover { border-color: var(--accent); }
+    .more img { width: 56px; height: 56px; flex: none; }
+    .more b { display: block; font-size: 18px; }
+    .more span { color: var(--muted); font-size: 15.5px; }
+
     .support { margin-top: 56px; display: flex; flex-wrap: wrap; align-items: center; gap: 20px 28px; padding: 28px 30px; border-radius: 18px; background: var(--accent-soft); }
     .support > svg { flex: none; width: 56px; height: 56px; fill: none; stroke: var(--accent); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
     .support div { flex: 1 1 320px; }
@@ -212,8 +218,14 @@
       <details><summary>Does it work when my computers are on different networks?</summary><p>No - that's the point: everything stays on your local network. When you come back to the same Wi-Fi, anything copied in the meantime syncs into the shared history.</p></details>
       <details><summary>Where is my history stored?</summary><p>On each computer, in the app's data folder (Settings → Open data folder). Clearing the history clears it on all connected devices, except starred items.</p></details>
       <details><summary>The other computer doesn't show up.</summary><p>Check that both are on the same network (not a guest network), that ClipBridge is open on both, and that the codes match. If your router blocks discovery, add the other computer by its IP address in Settings → “Other device not showing up?”.</p></details>
-      <details><summary>Can it sync files?</summary><p>Not yet - text, formatted text and images. Contributions are welcome.</p></details>
+      <details><summary>Can it sync files?</summary><p>Not yet - text, formatted text and images. For files, there's <a href="https://aiworldbyshachar.github.io/folderbridge/">FolderBridge</a>: one folder, identical on your Mac and your PC.</p></details>
       <details><summary>Is it really free?</summary><p>Yes. ClipBridge is open source under the MIT licence. No accounts, no ads, no tracking.</p></details>
+    </section>
+
+    <section id="more">
+      <h2>More free tools</h2>
+      <p class="sub">Small tools that make everyday work easier, by AI World by Shachar.</p>
+      <a class="more" href="https://aiworldbyshachar.github.io/folderbridge/"><img src="media/folderbridge-128.png" alt=""><div><b>FolderBridge</b><span>Save on your Mac, open on your PC - one folder, identical on both computers.</span></div></a>
     </section>
 
     <section class="support" id="support">

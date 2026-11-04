@@ -53,4 +53,8 @@ npm test
 
 במק: `bash scripts/build-mac.sh` בונה ומתקין ב-Applications. פרטים טכניים מלאים ב-[README באנגלית](README.md).
 
+## עוד כלים חינמיים
+
+[FolderBridge](https://github.com/aiworldbyshachar/folderbridge): שומרים במק, פותחים בפיסי, עם תיקייה אחת שזהה בשני המחשבים.
+
 </div>

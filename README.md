@@ -100,6 +100,10 @@ The film on the website is code too: [`video/`](video) is a [HyperFrames](https:
 
 Issues and pull requests are welcome. Good first ideas: file transfer, more languages (add a table to `src/shared/i18n.js`), Linux support.
 
+## More free tools
+
+[FolderBridge](https://github.com/aiworldbyshachar/folderbridge) - save on your Mac, open on your PC, with one folder that stays identical on both computers.
+
 ## Licence
 
 [MIT](LICENSE) — free to use, change and share.
