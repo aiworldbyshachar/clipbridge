@@ -102,7 +102,8 @@ Issues and pull requests are welcome. Good first ideas: file transfer, more lang
 
 ## More free tools
 
-[FolderBridge](https://github.com/aiworldbyshachar/folderbridge) - save on your Mac, open on your PC, with one folder that stays identical on both computers.
+- [FolderBridge](https://github.com/aiworldbyshachar/folderbridge) - save on your Mac, open on your PC, with one folder that stays identical on both computers.
+- [KeyBridge](https://github.com/aiworldbyshachar/keybridge) - press it once, it's typed: text shortcuts and hotkeys with left and right modifier keys, on every computer you sign in to.
 
 ## Licence
 

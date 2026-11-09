@@ -55,6 +55,7 @@ npm test
 
 ## עוד כלים חינמיים
 
-[FolderBridge](https://github.com/aiworldbyshachar/folderbridge): שומרים במק, פותחים בפיסי, עם תיקייה אחת שזהה בשני המחשבים.
+- [FolderBridge](https://github.com/aiworldbyshachar/folderbridge): שומרים במק, פותחים בפיסי, עם תיקייה אחת שזהה בשני המחשבים.
+- [KeyBridge](https://github.com/aiworldbyshachar/keybridge): לוחצים פעם אחת והטקסט מוקלד. קיצורי מקלדת עם הבחנה בין מקשי ימין ושמאל, בכל מחשב שמתחברים אליו.
 
 </div>
