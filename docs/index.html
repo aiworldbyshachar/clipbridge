@@ -124,6 +124,13 @@
     @media (max-width: 480px) {
       .top a.gh .long { display: none; }
     }
+    /* the smallest phones (320 px): the header's three items didn't fit and the page scrolled sideways */
+    @media (max-width: 360px) {
+      header.top { gap: 8px; }
+      .brand { gap: 8px; font-size: 17px; }
+      .brand img { width: 28px; height: 28px; }
+      .top a.gh { gap: 5px; font-size: 14px; }
+    }
   </style>
 </head>
 <body>
