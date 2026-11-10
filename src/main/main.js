@@ -520,7 +520,7 @@ function buildTrayMenu() {
     : online.length
     ? t('trayConnected', { names: online.map((p) => p.name).join(', ') })
     : t('statusSearching');
-  tray.setToolTip(`ClipBridge — ${status}`);
+  tray.setToolTip(`ClipBridge - ${status}`);
 
   const recent = store.latest(10).map((c) => ({
     label: c.ctype === 'text' ? trayLabel(c.text) : `🖼  ${t('trayImage', { w: c.w, h: c.h })}`,

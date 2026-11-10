@@ -24,7 +24,7 @@
       pinned: true,
     },
     { origin: MAC, ts: now - 95 * min, ctype: 'text', text: 'shachar@example.com' },
-    { origin: PC, ts: now - 3.2 * 60 * min, ctype: 'text', text: 'Order #48213 — 2× USB-C cable, 1× 65W charger. Delivery Thursday.' },
+    { origin: PC, ts: now - 3.2 * 60 * min, ctype: 'text', text: 'Order #48213 - 2× USB-C cable, 1× 65W charger. Delivery Thursday.' },
     {
       origin: MAC,
       ts: now - 26 * 60 * min,

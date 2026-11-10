@@ -22,7 +22,7 @@ CSC_IDENTITY_AUTO_DISCOVERY=false npx electron-builder --mac dir "--$ARCH" --pub
 
 APP=$(find dist -maxdepth 2 -name 'ClipBridge.app' -type d | head -n 1)
 if [ -z "$APP" ]; then
-  echo "The build didn't produce ClipBridge.app — see the errors above."
+  echo "The build didn't produce ClipBridge.app - see the errors above."
   exit 1
 fi
 
@@ -36,4 +36,4 @@ codesign --verify --deep /Applications/ClipBridge.app >/dev/null 2>&1 ||
   codesign --force --deep --sign - /Applications/ClipBridge.app
 
 open /Applications/ClipBridge.app
-echo "✓ ClipBridge is installed and running — it's in the Dock and the menu bar."
+echo "✓ ClipBridge is installed and running - it's in the Dock and the menu bar."
